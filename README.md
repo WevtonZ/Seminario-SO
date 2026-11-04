@@ -4,8 +4,11 @@
 
 ## Equipe: queremos emprego
 202301431 - Danilo Lourenço Macedo Dias
+
 202301437 - Felipe do Espirito Santo Sabino
+
 202401773 - Gabriel dos Santos Oliveira 
+
 202103785 - Wevton Junior Fagundes Santana
 
 ## Apresentações
