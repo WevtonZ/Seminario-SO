@@ -12,9 +12,9 @@
 202103785 - Wevton Junior Fagundes Santana
 
 ## Apresentações
-1. Link para a primeira apresentação (canva, google slides, etc.) <br>
-2. Link para a segunda apresentação (canva, google slides, etc.) <br>
-...
+1. [Apresentação 1](https://docs.google.com/presentation/d/1eixvtAASkLtC9iFD6saS6Op2AYg7gExORQ_1SO6LLiE/edit?slide=id.g1619b4b1478_0_160#slide=id.g1619b4b1478_0_160) <br>
+2. [Apresentação 2](https://docs.google.com/presentation/d/1ICUxV39he5M6L8Q5ocgflnhrpJmuoMaQnYiOIuaaYek/edit?slide=id.h1b1034c9d852efe2_1_0#slide=id.h1b1034c9d852efe2_1_0) <br>
+
 
 ## Resumo
 O resumo é uma descrição breve do seu projeto, em até 10 orações. <br>
