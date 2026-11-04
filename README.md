@@ -30,7 +30,31 @@ Comparar o tempo total de execução, o tempo de CPU, a utilização média de C
 Uma Análise Exploratória de Dados (AED) ajuda a descrever os dados.
 - **Modelos:** Algoritmos, conjunto de tecnologias (*software stack*), infraestrutura (real ou simulada), etc.
 - **Métricas:** Como você verificará se o(s) objetivo(s) do projeto foi(foram) alcançado(s)? (qualitativas, quantitativas)
-- **Fluxograma:** Um diagrama das fases do projeto (em uma imagem).
+
+### Conjunto de dados e experimentos
+
+Os dados serão produzidos pela equipe por meio da execução de um mesmo programa em três ambientes: nativo, contêiner e máquina virtual. Serão utilizadas entradas de diferentes tamanhos, mantendo os mesmos dados de entrada nos três ambientes. O programa e os tamanhos das entradas serão definidos na etapa de preparação.
+
+Cada combinação de ambiente e entrada será uma condição experimental, executada repetidas vezes. Os resultados serão registrados em tabelas e analisados por meio de estatísticas descritivas, como média, mediana e desvio-padrão, permitindo comparar o desempenho e a variabilidade das medições.
+
+### Modelos e infraestrutura
+
+Os experimentos serão realizados em uma mesma máquina física, com Linux, utilizando execução nativa, contêiner Docker e uma máquina virtual Linux. A ferramenta de virtualização será definida e documentada durante a preparação dos ambientes.
+
+Serão mantidas versões equivalentes do programa e de suas dependências, além do mesmo número de threads e condições comparáveis de acesso aos recursos. As configurações de hardware, software, CPU e memória serão registradas para permitir a reprodução dos testes.
+
+Antes das medições, serão realizados testes de validação da saída e aquecimento. As execuções ocorrerão uma por vez, alternando a ordem dos ambientes e reduzindo atividades em segundo plano. O tempo de inicialização dos ambientes não fará parte das medições.
+
+### Métricas
+
+A coleta será realizada com o GNU Time, utilizando o comando `/usr/bin/time -v ./prog` dentro de cada ambiente. Serão consideradas as seguintes métricas:
+
+- **Tempo total de execução:** tempo decorrido entre o início e o término do programa, incluindo processamento e esperas.
+- **Tempo de CPU:** soma dos tempos de processamento em modo usuário (*User time*) e em modo kernel (*System time*).
+- **Utilização média de CPU:** relação percentual entre o tempo de CPU e o tempo total de execução.
+- **Pico de memória residente:** maior quantidade de memória do processo residente na RAM durante a execução.
+
+As medições representam os recursos utilizados pela aplicação, não o consumo total da infraestrutura, como o sistema operacional da máquina virtual. Os resultados serão comparados com a execução nativa, considerando as diferenças percentuais e a variabilidade entre repetições, e discutidos com base na literatura.
 
 ## Fluxograma
 ![Fluxograma da metodologia](Fluxograma.png)
