@@ -67,4 +67,13 @@ Análise com base na literatura utilizada na seção de Introdução!
 Em que medida o(s) objetivo(s) foi(foram) alcançado(s)?
 
 ## Referências
-No formato ABNT
+
+DOCKER INC. **What is a container?** [S. l.]: Docker Inc., [s. d.]. Disponível em: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/. Acesso em: 4 nov. 2026.
+
+FELTER, Wes; FERREIRA, Alexandre; RAJAMONY, Ram; RUBIO, Juan. An updated performance comparison of virtual machines and Linux containers. In: IEEE INTERNATIONAL SYMPOSIUM ON PERFORMANCE ANALYSIS OF SYSTEMS AND SOFTWARE (ISPASS), 2015, Philadelphia. **Proceedings [...]**. [S. l.]: IEEE, 2015. p. 171–172. DOI: 10.1109/ISPASS.2015.7095802. Disponível em: https://people.computing.clemson.edu/~jmarty/projects/lowLatencyNetworking/papers/TGIF-middleware/AnupdatedPerfAnalysisofContainersandVMs.pdf. Acesso em: 4 nov. 2026.
+
+GNU PROJECT. **GNU Time**. [S. l.]: GNU Project, [s. d.]. Disponível em: https://www.gnu.org/software/time/manual/time.html. Acesso em: 4 nov. 2026.
+
+LI, Zheng; KIHL, Maria; LU, Qinghua; ANDERSSON, Jens A. Performance overhead comparison between hypervisor and container based virtualization. In: IEEE INTERNATIONAL CONFERENCE ON ADVANCED INFORMATION NETWORKING AND APPLICATIONS (AINA), 31., 2017, Taipei. **Proceedings [...]**. [S. l.]: IEEE, 2017. p. 955–962. DOI: 10.1109/AINA.2017.79. Disponível em: https://arxiv.org/pdf/1708.01388. Acesso em: 4 nov. 2026.
+
+SILBERSCHATZ, A.; GALVIN, P.; GAGNE, G. **Fundamentos de sistemas operacionais**. 8. ed. Rio de Janeiro: LTC, 2010.
