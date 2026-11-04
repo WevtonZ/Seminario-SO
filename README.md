@@ -21,6 +21,10 @@ A introdução deve ter as seguintes partes: <br>
 - **Revisão bibliográfica:** Pesquise o tema utilizando, pelo menos, cinco fontes (as mesmas que devem ser úteis para a seção de Discussão). Utilize fontes confiáveis, por exemplo, Google Acadêmico ou publicações revisadas por pares (blogs, repositorios, publicações online, etc.).
 - **Objetivos:** Qual é o propósito do projeto no qual você trabalhará ao longo das próximas cinco semanas? Exemplo: entender e aplicar o conceito de ..., experimentar um conjunto de tecnologias (*software stack*), analisar o estado da arte em ..., etc.
 
+### Objetivos
+
+Comparar o tempo total de execução, o tempo de CPU, a utilização média de CPU e o pico de memória residente de uma aplicação nos três ambientes. Os testes serão realizados sob condições controladas e com repetições, permitindo analisar a variabilidade dos resultados e relacioná-los à literatura.
+
 ## Metodologia
 - **Conjunto de dados (*Dataset*):** Descreva os dados ou os experimentos que serão realizados. Explicar se eles foram coletados por você ou extraídos da literatura.
 Uma Análise Exploratória de Dados (AED) ajuda a descrever os dados.
