@@ -32,6 +32,23 @@ Uma Análise Exploratória de Dados (AED) ajuda a descrever os dados.
 - **Métricas:** Como você verificará se o(s) objetivo(s) do projeto foi(foram) alcançado(s)? (qualitativas, quantitativas)
 - **Fluxograma:** Um diagrama das fases do projeto (em uma imagem).
 
+## Fluxograma
+flowchart TD
+    A(["INÍCIO: definir programa, entradas e configurações"]) --> B["Preparar os três ambientes"]
+    B --> C["Executar teste e validar a saída"]
+    C --> D{"Execução correta?"}
+    D -- Não --> E["Corrigir a configuração ou o programa"]
+    E --> C
+    D -- Sim --> F["Realizar aquecimento"]
+    F --> G["Executar uma condição e coletar métricas"]
+    G --> H["Salvar resultados e configuração"]
+    H --> I{"Todas as condições e repetições concluídas?"}
+    I -- Não --> J["Selecionar a próxima condição"]
+    J --> G
+    I -- Sim --> K["Analisar dados e comparar com o ambiente nativo"]
+
+    style A fill:#d1fae5,stroke:#047857,stroke-width:4px,color:#064e3b,font-weight:bold
+
 ## Resultados
 - Gráficos
 - Tabelas
