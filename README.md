@@ -26,10 +26,6 @@ A introdução deve ter as seguintes partes: <br>
 Comparar o tempo total de execução, o tempo de CPU, a utilização média de CPU e o pico de memória residente de uma aplicação nos três ambientes. Os testes serão realizados sob condições controladas e com repetições, permitindo analisar a variabilidade dos resultados e relacioná-los à literatura.
 
 ## Metodologia
-- **Conjunto de dados (*Dataset*):** Descreva os dados ou os experimentos que serão realizados. Explicar se eles foram coletados por você ou extraídos da literatura.
-Uma Análise Exploratória de Dados (AED) ajuda a descrever os dados.
-- **Modelos:** Algoritmos, conjunto de tecnologias (*software stack*), infraestrutura (real ou simulada), etc.
-- **Métricas:** Como você verificará se o(s) objetivo(s) do projeto foi(foram) alcançado(s)? (qualitativas, quantitativas)
 
 ### Conjunto de dados e experimentos
 
