@@ -16,10 +16,23 @@
 Máquinas virtuais e contêineres oferecem diferentes formas de isolamento de aplicações, que podem influenciar o desempenho e o consumo de recursos. Este projeto tem como objetivo comparar a execução de um mesmo programa em ambiente nativo, em um contêiner e em uma máquina virtual. Serão realizados testes repetidos sob condições controladas, utilizando o GNU Time para medir o tempo total de execução, o tempo de CPU, a utilização média de CPU e o pico de memória residente. Os resultados serão comparados com a execução nativa e discutidos com base na literatura. Espera-se identificar diferenças de desempenho e consumo de recursos entre os ambientes para a carga de trabalho escolhida. 
 
 ## Introdução
-A introdução deve ter as seguintes partes: <br>
-- **Motivação:** É aqui que você apresenta a ideia por trás do seu projeto. Recomenda-se uma narrativa do geral para o específico, começando com uma descrição ampla do tema e avançando para paradigmas, experimentos, aplicações ou fenômenos mais detalhados que serão estudados.
-- **Revisão bibliográfica:** Pesquise o tema utilizando, pelo menos, cinco fontes (as mesmas que devem ser úteis para a seção de Discussão). Utilize fontes confiáveis, por exemplo, Google Acadêmico ou publicações revisadas por pares (blogs, repositorios, publicações online, etc.).
-- **Objetivos:** Qual é o propósito do projeto no qual você trabalhará ao longo das próximas cinco semanas? Exemplo: entender e aplicar o conceito de ..., experimentar um conjunto de tecnologias (*software stack*), analisar o estado da arte em ..., etc.
+
+### Motivação
+
+O interesse pelo tema surgiu inicialmente da utilização de máquinas virtuais como forma de executar diferentes sistemas operacionais em uma mesma máquina física. Essa experiência despertou a curiosidade sobre os conceitos de virtualização e sobre as diferentes maneiras de manter ambientes de execução isolados. A partir disso, surgiu o interesse pela conteinerização, uma abordagem que isola aplicações sem implementar virtualização do hardware. Com o objetivo de compreender melhor o funcionamento dessas duas tecnologias e suas diferenças práticas, optou-se por realizar uma análise comparativa de desempenho entre máquinas virtuais e contêineres, avaliando o impacto de cada abordagem sobre a utilização dos recursos computacionais.
+
+### Revisão bibliográfica
+
+Para compreender os fundamentos da virtualização e o funcionamento das máquinas virtuais, foi utilizado como referência o livro *Fundamentos de Sistemas Operacionais*, de Silberschatz, Galvin e Gagne. Como complemento, consultou-se a documentação oficial do Docker, que apresenta os conceitos fundamentais da conteinerização.
+
+Além da fundamentação teórica, foram consultados trabalhos que investigam as diferenças de desempenho entre essas tecnologias. Felter et al. (2015) apresentam uma comparação entre máquinas virtuais e contêineres Linux. De maneira semelhante, Zheng et al. (2017) investigam a sobrecarga de desempenho associada à virtualização baseada em hipervisores e à baseada em contêineres. Esses trabalhos serviram de referência para compreender os fatores que podem influenciar o desempenho de cada ambiente e para orientar a análise dos resultados obtidos neste projeto.
+
+Por fim, para auxiliar na coleta das métricas dos experimentos, foi consultada a documentação do GNU Time, que descreve o funcionamento do comando `time` e as informações que podem ser obtidas durante a execução de um programa, como o tempo de execução, o tempo de CPU e o pico de memória residente.
+
+### Objetivos
+
+Comparar o tempo total de execução, o tempo de CPU, a utilização média de CPU e o pico de memória residente de uma aplicação nos três ambientes. Os testes serão realizados sob condições controladas e com repetições, permitindo analisar a variabilidade dos resultados e relacioná-los à literatura.
+
 
 ### Objetivos
 
