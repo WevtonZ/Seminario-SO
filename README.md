@@ -33,11 +33,6 @@ Por fim, para auxiliar na coleta das métricas dos experimentos, foi consultada 
 
 Comparar o tempo total de execução, o tempo de CPU, a utilização média de CPU e o pico de memória residente de uma aplicação nos três ambientes. Os testes serão realizados sob condições controladas e com repetições, permitindo analisar a variabilidade dos resultados e relacioná-los à literatura.
 
-
-### Objetivos
-
-Comparar o tempo total de execução, o tempo de CPU, a utilização média de CPU e o pico de memória residente de uma aplicação nos três ambientes. Os testes serão realizados sob condições controladas e com repetições, permitindo analisar a variabilidade dos resultados e relacioná-los à literatura.
-
 ## Metodologia
 
 ### Conjunto de dados e experimentos
