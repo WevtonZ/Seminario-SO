@@ -61,7 +61,7 @@ A coleta será realizada com o GNU Time, utilizando o comando `/usr/bin/time -v 
 As medições representam os recursos utilizados pela aplicação, não o consumo total da infraestrutura, como o sistema operacional da máquina virtual. Os resultados serão comparados com a execução nativa, considerando as diferenças percentuais e a variabilidade entre repetições, e discutidos com base na literatura.
 
 ## Fluxograma
-![Fluxograma da metodologia](Fluxograma.png)
+![Fluxograma da metodologia](fluxograma.png)
 
 ## Resultados
 - Gráficos
