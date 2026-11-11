@@ -2,7 +2,7 @@
 
 ## Máquinas Virtuais x Contêineres
 
-[Input usado nas comparaçẽs.](https://drive.google.com/file/d/1PrZusESkUUFtpNGz8xjgNSfl4RJbw3Gy/view?usp=drive_link)
+[Input usado nas comparações.](https://drive.google.com/file/d/1PrZusESkUUFtpNGz8xjgNSfl4RJbw3Gy/view?usp=drive_link)
 
 ## Equipe: queremos emprego
 202301431 - Danilo Lourenço Macedo Dias <br>
