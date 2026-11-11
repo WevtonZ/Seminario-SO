@@ -11,6 +11,7 @@
 ## Apresentações
 1. [Apresentação 1](https://docs.google.com/presentation/d/1eixvtAASkLtC9iFD6saS6Op2AYg7gExORQ_1SO6LLiE/edit?slide=id.g1619b4b1478_0_160#slide=id.g1619b4b1478_0_160) <br>
 2. [Apresentação 2](https://docs.google.com/presentation/d/1ICUxV39he5M6L8Q5ocgflnhrpJmuoMaQnYiOIuaaYek/edit?slide=id.h1b1034c9d852efe2_1_0#slide=id.h1b1034c9d852efe2_1_0) <br>
+3. [Apresentação 3](https://docs.google.com/presentation/d/16z0TYBF9uCU3Hrw_g6JLAGwjfevivT5t1Gwry6FWno0/edit?slide=id.g1619b4b1478_0_160#slide=id.g1619b4b1478_0_160) <br>
 
 ## Resumo
 Máquinas virtuais e contêineres oferecem diferentes formas de isolamento de aplicações, que podem influenciar o desempenho e o consumo de recursos. Este projeto tem como objetivo comparar a execução de um mesmo programa em ambiente nativo, em um contêiner e em uma máquina virtual. Serão realizados testes repetidos sob condições controladas, utilizando o GNU Time para medir o tempo total de execução, o tempo de CPU, a utilização média de CPU e o pico de memória residente. Os resultados serão comparados com a execução nativa e discutidos com base na literatura. Espera-se identificar diferenças de desempenho e consumo de recursos entre os ambientes para a carga de trabalho escolhida. 
