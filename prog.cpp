@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <vector>
+#include <iostream>
+#include <algorithm>
 using namespace std;
 int main(){
     ios::sync_with_stdio(0);
@@ -12,4 +14,4 @@ int main(){
     cout<<'\n';
 
     return 0;
-}q
+}
