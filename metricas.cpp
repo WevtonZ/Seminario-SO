@@ -1,68 +1,51 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm>
 #include <fstream>
+#include <cstdlib>
 using namespace std;
 
-string aux = "__aux_tmp__";
-string file = "metricas.txt";
-string csv = "metricas.csv";
+const string aux = "__aux_tmp__", tfile = "metricas.txt", csv = "metricas.csv";
 
-vector<string> get_inputs(){
-    vector<string> inputs;
-
-    string cmd = "ls inputs/ > " + aux;
-    system(cmd.c_str());
-
-    ifstream st;
-    st.open(aux);
-    string s;
-    while(st >> s){
-        inputs.push_back(s);
-    }
-    st.close();
-    return inputs;
-}
+struct Variante { string nome, defs; };
 
 int main(){
-    system("g++ prog.cpp -o prog");
-    
-    auto inputs = get_inputs();
-    ofstream output;
-    output.open(csv);
+    vector<Variante> variantes = {
+        {"rw_lento", ""}, {"rw_rapido", "-DFASTIO"},
+        {"sort_lento", "-DSORT"}, {"sort_rapido", "-DSORT -DFASTIO"}};
 
-    output << "Tempo Total de Execução, Tempo de CPU, Utilização Média de CPU, Pico de Memória Residente\n";
-    for(auto in: inputs){
-        cout<<"Processando: "<<in<<endl;
-        string path  = "inputs/"+in;
-        string cmd = "/usr/bin/time -f '%e %U %S %P %M' -o " + file + " ./prog < " + path + " > " + aux;
-
-        system(cmd.c_str());
-
-
-        ifstream st;
-        st.open(file);
-
-        //tempo total ,	Tempo de CPU em modo usuário , 	Tempo de CPU em modo kernel , 	Utilização média de CPU , 	Pico de memória residente em KiB
-        // 0.00 0.00 0.00 66% 4120
-        long double tempo_total, tempo_cpu_usuario, tempo_cpu_kernel;
-        string media_cpu;
-        int memoria;
-
-        st >> tempo_total >> tempo_cpu_usuario >> tempo_cpu_kernel >> media_cpu >> memoria;
-        long double tempo_cpu = tempo_cpu_usuario + tempo_cpu_kernel;
-
-        output << tempo_total << ", " << tempo_cpu << ", " << media_cpu <<", "<< memoria << "\n";
- 
-        st.close();
-    }
-    output.close();
-
-    for(string s: {aux, file}) {
-        string cmd = "rm " + s;
-        system(cmd.c_str());
+    for(auto &v : variantes){
+        string cmd = "g++ " + v.defs + " prog.cpp -o prog_" + v.nome;
+        if(system(cmd.c_str()) != 0){ cerr << "falha ao compilar " << v.nome << "\n"; return 1; }
     }
 
+    system(("ls inputs/ > " + aux).c_str());
+    vector<string> inputs; { ifstream st(aux); string s; while(st >> s) inputs.push_back(s); }
+
+    ofstream out(csv);
+    out << "variante,arquivo,N,tempo_total,tempo_usuario,tempo_sistema,tempo_cpu,utilizacao_cpu,pico_memoria_kib\n";
+
+    for(size_t i = 0; i < inputs.size(); i++){
+        for(size_t k = 0; k < variantes.size(); k++){
+            auto &v = variantes[(i + k) % variantes.size()];   // ordem das variantes gira a cada arquivo
+            string path = "inputs/" + inputs[i];
+            cout << "Processando: " << v.nome << " " << inputs[i] << endl;
+
+            system("sync");                                    // grava a saída anterior antes de medir
+            system(("cat " + path + " > /dev/null").c_str());  // entrada no cache, igual nos 3 ambientes
+            string cmd = "/usr/bin/time -f '%e %U %S %P %M' -o " + tfile + " ./prog_" + v.nome
+                       + " < " + path + " > " + aux;
+            system(cmd.c_str());
+
+            ifstream st(tfile);
+            double total, usuario, sistema; string util; long mem;
+            if(!(st >> total >> usuario >> sistema >> util >> mem)){ cerr << "leitura falhou\n"; continue; }
+            out << v.nome << "," << inputs[i] << "," << inputs[i].substr(3, 3) << ","
+                << total << "," << usuario << "," << sistema << "," << usuario + sistema << ","
+                << util << "," << mem << "\n";
+        }
+    }
+    out.close();
+    system(("rm -f " + aux + " " + tfile).c_str());
     return 0;
 }
