@@ -1,15 +1,3 @@
-# separar os caras por N, pra cada N, separar pela variante
-
-# calcular pra cada grupo a curva de gauss, ver se eh   
-# pra cada grupo (N,variante), calcular: media, desvio padrao amostral e tratamento de discrepancias
-
-# elaborar diagramas
-# grafico de dispersao, pra cada grupo fazer de uma cor e fazer com todas as medidas
-# grafico de caixa vou fazer com a media ou com todas as medidas?
-# grafico de radar vou fazer com a media
-# grafico de barras vou fazer com a media
-
-
 import numpy as np
 import pandas as pd
 
@@ -28,14 +16,10 @@ METRICAS = [
     "pico_memoria_kib",
 ]
 
-# ---------------------------------------------------------------- leitura
-# N é lido como texto para manter rótulos como "1e3"; N_num serve para ordenar
 df = pd.read_csv(ENTRADA, dtype={"N": str})
 df["N_num"] = df["N"].astype(float)
 df["utilizacao_cpu"] = df["utilizacao_cpu"].str.rstrip("%").astype(float)
 
-# Resolução de cada métrica: menor diferença não nula entre valores distintos
-# (ex.: 0,01 s nos tempos, 1 ponto percentual na utilização, 4 KiB na memória)
 RESOLUCAO = {}
 for m in METRICAS:
     diferencas = np.diff(np.sort(df[m].unique()))
