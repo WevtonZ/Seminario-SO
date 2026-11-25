@@ -68,9 +68,67 @@ As medições representam os recursos utilizados pela aplicação, não o consum
 ![Fluxograma da metodologia](fluxograma.png)
 
 ## Resultados
-- Gráficos
-- Tabelas
-- Multimídia (vídeos, imagens, áudio)
+
+A partir de um mesmo programa `prog.cpp` foram obtidos as métricas com diferentes valores de entrada `N = {1e3,1e4,1e5,1e6,1e7}` e diferentes configurações no código. Foram executadas 4 versões:
+- rw_lento: Programa de entrada e saída sem Fast I/O
+- rw_rapido: Programa de entrada e saída com Fast I/O
+- sort_lento: Programa com ordenação de vetores sem Fast I/O
+- sort_rapido: Programa com ordenação de vetores com Fast I/O
+
+Para cada grupo de execuções definidas pela tupla `(N,versao,ambiente)` foram calculadas a média e desvio padrão e foram obtidos diversos gráficos.
+
+### Gráficos de coluna
+
+![](final/graficos_colunas/colunas_N1e3_rw_lento.png)
+![](final/graficos_colunas/colunas_N1e3_rw_rapido.png)
+![](final/graficos_colunas/colunas_N1e3_sort_lento.png)
+![](final/graficos_colunas/colunas_N1e3_sort_rapido.png)
+
+![](final/graficos_colunas/colunas_N1e4_rw_lento.png)
+![](final/graficos_colunas/colunas_N1e4_rw_rapido.png)
+![](final/graficos_colunas/colunas_N1e4_sort_lento.png)
+![](final/graficos_colunas/colunas_N1e4_sort_rapido.png)
+
+![](final/graficos_colunas/colunas_N1e5_rw_lento.png)
+![](final/graficos_colunas/colunas_N1e5_rw_rapido.png)
+![](final/graficos_colunas/colunas_N1e5_sort_lento.png)
+![](final/graficos_colunas/colunas_N1e5_sort_rapido.png)
+
+![](final/graficos_colunas/colunas_N1e6_rw_lento.png)
+![](final/graficos_colunas/colunas_N1e6_rw_rapido.png)
+![](final/graficos_colunas/colunas_N1e6_sort_lento.png)
+![](final/graficos_colunas/colunas_N1e6_sort_rapido.png)
+
+![](final/graficos_colunas/colunas_N1e7_rw_lento.png)
+![](final/graficos_colunas/colunas_N1e7_rw_rapido.png)
+![](final/graficos_colunas/colunas_N1e7_sort_lento.png)
+![](final/graficos_colunas/colunas_N1e7_sort_rapido.png)
+
+### Gráficos de caixa
+
+![](final/graficos_distribuicao/distribuicao_N1e6_rw_lento.png)
+![](final/graficos_distribuicao/distribuicao_N1e6_rw_rapido.png)
+![](final/graficos_distribuicao/distribuicao_N1e6_sort_lento.png)
+![](final/graficos_distribuicao/distribuicao_N1e6_sort_rapido.png)
+
+![](final/graficos_distribuicao/distribuicao_N1e7_rw_lento.png)
+![](final/graficos_distribuicao/distribuicao_N1e7_rw_rapido.png)
+![](final/graficos_distribuicao/distribuicao_N1e7_sort_lento.png)
+![](final/graficos_distribuicao/distribuicao_N1e7_sort_rapido.png)
+
+### Heatmap
+
+![](final/graficos_heatmap/heatmap_tempo_total.png)
+![](final/graficos_heatmap/heatmap_tempo_cpu.png)
+![](final/graficos_heatmap/heatmap_utilizacao_cpu.png)
+![](final/graficos_heatmap/heatmap_pico_memoria_kib.png)
+
+### Overhead
+
+![](final/graficos_overhead/overhead_tempo_total.png)
+![](final/graficos_overhead/overhead_tempo_cpu.png)
+![](final/graficos_overhead/overhead_utilizacao_cpu.png)
+![](final/graficos_overhead/overhead_pico_memoria_kib.png)
 
 ## Discussão
 Análise com base na literatura utilizada na seção de Introdução!
