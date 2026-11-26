@@ -131,10 +131,14 @@ Para cada grupo de execuções definidas pela tupla `(N,versao,ambiente)` foram 
 ![](final/graficos_overhead/overhead_pico_memoria_kib.png)
 
 ## Discussão
-Análise com base na literatura utilizada na seção de Introdução!
+
+Para as entradas de `1e6` e `1e7`, o ambiente nativo apresentou o menor tempo médio nas quatro versões do programa, seguido pelo Docker e pela VM. Com `1e7`, o Docker levou de 1,6% a 2,3% mais tempo que o nativo, e a VM, de 9,0% a 12,8%. O desempenho do Docker próximo ao nativo é compatível com os resultados de Felter et al. (2015). A variação da sobrecarga entre as versões também está de acordo com Li et al. (2017), que observaram diferenças conforme a carga de trabalho.
+
+Para `1e7`, o Fast I/O teve mais impacto que a escolha do ambiente. Nos três ambientes, a redução no tempo foi de 66% a 67% sem ordenação e de 42% a 43% com ordenação. O pico médio de memória da aplicação foi semelhante, entre 41,5 e 42,0 MiB. Nas entradas de `1e3` e `1e4` inteiros, a resolução do cronômetro foi insuficiente para identificar diferenças de tempo entre os ambientes.
 
 ## Conclusão
-Em que medida o(s) objetivo(s) foi(foram) alcançado(s)?
+
+O objetivo de comparar os três ambientes foi alcançado para as maiores entradas. O ambiente nativo apresentou os menores tempos de execução, o Docker teve desempenho próximo ao nativo e a máquina virtual levou mais tempo nas quatro versões do programa. O consumo de memória da aplicação foi semelhante nos três ambientes. Para as duas menores entradas, a resolução do cronômetro foi insuficiente para identificar diferenças de tempo.
 
 ## Referências
 
